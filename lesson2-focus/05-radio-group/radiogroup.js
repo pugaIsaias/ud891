@@ -40,7 +40,8 @@
         e.preventDefault();
 
         // This seems like a good place to do some stuff :)
-        this.focusedIdx++;
+        if (this.focusedIdx === this.buttons.length - 1) this.focusedIdx = 0;
+        else this.focusedIdx++;
         break;
       }
     }
